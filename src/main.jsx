@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Signup from './Signup';
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
-// Adicione os scripts do Font Awesome e Google Fonts no seu index.html
-// Ou use react-helmet para adicioná-los dinamicamente
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/home' element={<App />}></Route>
+        <Route path='/signup' element={<Signup />}></Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
